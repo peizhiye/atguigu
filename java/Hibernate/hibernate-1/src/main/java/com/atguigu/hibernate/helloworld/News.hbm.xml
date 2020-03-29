@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="com.atguigu.hibernate.helloworld">
+
+	<!-- 指定类和表的映射 -->
+    <class name="News" table="NEWS" dynamic-insert="true">
+    	
+		<!-- 指定持久化类的 OID 和表的主键的映射 -->
+        <id name="id" type="java.lang.Integer">
+            <column name="ID" />
+            <!-- 指定对象标识符生成器, 负责为 OID 生成唯一标识符. native: 使用数据库本地方式 -->
+            <generator class="native" />
+        </id>
+    
+		<!-- 映射类的属性和表的字段 -->
+        <property name="title" not-null="true" unique="true"
+        	index="news_index" length="50"
+        	type="java.lang.String" column="TITLE" >
+        </property>
+        
+        <property name="author" type="java.lang.String"
+        	index="news_index">
+            <column name="AUTHOR" />
+        </property>
+        
+        <property name="date" type="date">
+            <column name="DATE" />
+        </property>
+        
+        <property name="desc" 
+        	formula="(SELECT concat(title, ',', author) FROM NEWS n WHERE n.id = id)"></property>
+		
+		<property name="content">
+			<column name="CONTENT" sql-type="text"></column>
+		</property>
+		
+		<property name="picture" column="PICTURE" type="blob"></property>
+		
+    </class>
+    
+</hibernate-mapping>
