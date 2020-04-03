@@ -9,7 +9,7 @@
     </parent>
     <artifactId>struts2-1</artifactId>
     <version>${revision}</version>
-    <packaging>jar</packaging>
+    <packaging>war</packaging>
 
     <dependencies>
 
