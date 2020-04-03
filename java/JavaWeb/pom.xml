@@ -1,0 +1,157 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.atguigu.javaweb</groupId>
+    <artifactId>javaweb</artifactId>
+    <version>${revision}</version>
+    <packaging>pom</packaging>
+
+
+    <properties>
+<!--        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>-->
+        <project.build.sourceEncoding>GBK</project.build.sourceEncoding>
+        <java.version>1.8</java.version>
+        <revision>1.0-SNAPSHOT</revision>
+    </properties>
+
+    <dependencyManagement>
+        <dependencies>
+			<!-- https://mvnrepository.com/artifact/org.hibernate/hibernate-core -->
+<!--			<dependency>-->
+<!--				<groupId>org.hibernate</groupId>-->
+<!--				<artifactId>hibernate-core</artifactId>-->
+<!--				<version>4.2.5.Final</version>-->
+<!--			</dependency>-->
+
+            <dependency>
+                <groupId>mysql</groupId>
+                <artifactId>mysql-connector-java</artifactId>
+                <version>5.1.37</version>
+            </dependency>
+
+            <dependency>
+                <groupId>junit</groupId>
+                <artifactId>junit</artifactId>
+                <version>4.12</version>
+                <scope>test</scope>
+            </dependency>
+
+            <dependency>
+                <groupId>org.apache.struts</groupId>
+                <artifactId>struts2-core</artifactId>
+                <version>2.3.15.3</version>
+            </dependency>
+
+            <dependency>
+                <groupId>javax.servlet</groupId>
+                <artifactId>javax.servlet-api</artifactId>
+                <version>4.0.0</version>
+                <scope>provided</scope>
+            </dependency>
+
+            <dependency>
+                <groupId>javax.servlet.jsp</groupId>
+                <artifactId>javax.servlet.jsp-api</artifactId>
+                <version>2.3.3</version>
+                <scope>provided</scope>
+            </dependency>
+
+            <dependency>
+                <groupId>javax.servlet</groupId>
+                <artifactId>jstl</artifactId>
+                <version>1.1.2</version>
+            </dependency>
+
+            <dependency>
+                <groupId>taglibs</groupId>
+                <artifactId>standard</artifactId>
+                <version>1.1.2</version>
+            </dependency>
+
+            <!-- https://mvnrepository.com/artifact/c3p0/c3p0 -->
+            <dependency>
+                <groupId>c3p0</groupId>
+                <artifactId>c3p0</artifactId>
+                <version>0.9.1.2</version>
+            </dependency>
+
+            <!-- https://mvnrepository.com/artifact/commons-fileupload/commons-fileupload -->
+            <dependency>
+                <groupId>commons-fileupload</groupId>
+                <artifactId>commons-fileupload</artifactId>
+                <version>1.3</version>
+            </dependency>
+
+            <!-- https://mvnrepository.com/artifact/commons-dbutils/commons-dbutils -->
+            <dependency>
+                <groupId>commons-dbutils</groupId>
+                <artifactId>commons-dbutils</artifactId>
+                <version>1.3</version>
+            </dependency>
+
+            <!-- https://mvnrepository.com/artifact/com.google.code.gson/gson -->
+            <dependency>
+                <groupId>com.google.code.gson</groupId>
+                <artifactId>gson</artifactId>
+                <version>2.8.5</version>
+            </dependency>
+
+
+        </dependencies>
+    </dependencyManagement>
+
+    <build>
+<!--        <pluginManagement>-->
+<!--            <plugins>-->
+<!--                &lt;!&ndash;设置JAVA代码的编译级别&ndash;&gt;-->
+<!--                <plugin>-->
+<!--                    <groupId>org.apache.maven.plugins</groupId>-->
+<!--                    <artifactId>maven-compiler-plugin</artifactId>-->
+<!--                    <configuration>-->
+<!--                        <source>${java.version}</source>-->
+<!--                        <target>${java.version}</target>-->
+<!--                    </configuration>-->
+<!--                </plugin>-->
+<!--            </plugins>-->
+<!--        </pluginManagement>-->
+
+        <plugins>
+            <!--设置JAVA代码的编译级别-->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>${java.version}</source>
+                    <target>${java.version}</target>
+                </configuration>
+            </plugin>
+        </plugins>
+
+        <resources>
+            <resource>
+                <directory>src/main/java</directory>
+            </resource>
+            <resource>
+                <directory>src/main/resources</directory>
+            </resource>
+        </resources>
+    </build>
+
+    <modules>
+        <module>day_28_2</module>
+        <module>day_29</module>
+        <module>day_30</module>
+        <module>day_31</module>
+        <module>day_34</module>
+        <module>day_35</module>
+        <module>day_36</module>
+        <module>day_37</module>
+        <module>day_38</module>
+        <module>day_39</module>
+        <module>day_40</module>
+        <module>fileUpload</module>
+        <module>i18n</module>
+        <module>mvc</module>
+    </modules>
+</project>
