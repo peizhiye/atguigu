@@ -39,7 +39,7 @@
 		<!-- 配置构建过程中需要使用的插件 -->
 		<plugins>
 			<plugin>
-				<!-- cargo是一家专门从“启动Servlet容器”的组织 -->
+				<!-- cargo是一家专门从事“启动Servlet容器”的组织 -->
 				<groupId>org.codehaus.cargo</groupId>
 				<artifactId>cargo-maven2-plugin</artifactId>
 				<version>1.2.3</version>

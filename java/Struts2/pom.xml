@@ -81,7 +81,7 @@
         <plugins>
             <!--设置JAVA代码的编译级别-->
             <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
+<!--                <groupId>org.apache.maven.plugins</groupId>-->
                 <artifactId>maven-compiler-plugin</artifactId>
                 <configuration>
                     <source>${java.version}</source>
