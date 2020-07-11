@@ -46,14 +46,23 @@
             <dependency>
                 <groupId>javax.servlet</groupId>
                 <artifactId>javax.servlet-api</artifactId>
-                <version>4.0.0</version>
+                <version>3.0.1</version>
+<!--                <version>4.0.0</version>-->
                 <scope>provided</scope>
             </dependency>
+
+<!--            <dependency>-->
+<!--                <groupId>javax.servlet.jsp</groupId>-->
+<!--                <artifactId>jsp-api</artifactId>-->
+<!--                <version>2.2</version>-->
+<!--                <scope>provided</scope>-->
+<!--            </dependency>-->
 
             <dependency>
                 <groupId>javax.servlet.jsp</groupId>
                 <artifactId>javax.servlet.jsp-api</artifactId>
-                <version>2.3.3</version>
+                <version>2.2.1</version>
+<!--                <version>2.3.3</version>-->
                 <scope>provided</scope>
             </dependency>
 
@@ -131,6 +140,9 @@
         <resources>
             <resource>
                 <directory>src/main/java</directory>
+                <excludes>
+                    <exclude>**/*.java</exclude>
+                </excludes>
             </resource>
             <resource>
                 <directory>src/main/resources</directory>
