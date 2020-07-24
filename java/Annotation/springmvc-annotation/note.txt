@@ -25,8 +25,3 @@
 
 2）、配置组件（视图解析器、视图映射、静态资源映射、拦截器。。。）
 	extends WebMvcConfigurerAdapter
-
-
-
-			
-	

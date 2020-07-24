@@ -38,7 +38,7 @@ public class MyServletContainerInitializer implements ServletContainerInitialize
 			System.out.println(claz);
 		}
 		
-		//注册组件  ServletRegistration  
+		//注册Servlet  ServletRegistration
 		ServletRegistration.Dynamic servlet = sc.addServlet("userServlet", new UserServlet());
 		//配置servlet的映射信息
 		servlet.addMapping("/user");

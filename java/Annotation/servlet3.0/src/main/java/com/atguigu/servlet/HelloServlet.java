@@ -8,7 +8,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-@WebServlet("/hello")
+@WebServlet("/hello")	// 注意这里的 "/" 不能省略，否则会报错
 public class HelloServlet extends HttpServlet {
 	
 	@Override

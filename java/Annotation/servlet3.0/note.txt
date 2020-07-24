@@ -1,6 +1,6 @@
 Shared libraries（共享库） / runtimes pluggability（运行时插件能力）
 
-1、Servlet容器启动会扫描，当前应用里面每一个jar包的
+1、Servlet容器启动会扫描当前应用里面每一个jar包的
 	ServletContainerInitializer的实现
 2、提供ServletContainerInitializer的实现类；
 	必须绑定在，META-INF/services/javax.servlet.ServletContainerInitializer

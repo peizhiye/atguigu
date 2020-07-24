@@ -39,9 +39,9 @@ public class AsyncController {
 	/**
 	 * 1、控制器返回Callable
 	 * 2、Spring异步处理，将Callable 提交到 TaskExecutor 使用一个隔离的线程进行执行
-	 * 3、DispatcherServlet和所有的Filter退出web容器的线程，但是response 保持打开状态；
+	 * 3、DispatcherServlet和所有的Filter退出web容器的线程，但是 response 保持打开状态；
 	 * 4、Callable返回结果，SpringMVC将请求重新派发给容器，恢复之前的处理；
-	 * 5、根据Callable返回的结果。SpringMVC继续进行视图渲染流程等（从收请求-视图渲染）。
+	 * 5、根据Callable返回的结果，SpringMVC继续进行视图渲染流程等（从收请求-视图渲染）。
 	 * 
 	 * preHandle.../springmvc-annotation/async01
 		主线程开始...Thread[http-bio-8081-exec-3,5,main]==>1513932494700
@@ -73,7 +73,7 @@ public class AsyncController {
 			public String call() throws Exception {
 				System.out.println("副线程开始..."+Thread.currentThread()+"==>"+System.currentTimeMillis());
 				Thread.sleep(2000);
-				System.out.println("副线程开始..."+Thread.currentThread()+"==>"+System.currentTimeMillis());
+				System.out.println("副线程结束..."+Thread.currentThread()+"==>"+System.currentTimeMillis());
 				return "Callable<String> async01()";
 			}
 		};

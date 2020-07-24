@@ -51,8 +51,9 @@ import com.atguigu.bean.Blue;
  * 
  * 	 步骤：
  * 		1）、写一个监听器（ApplicationListener实现类）来监听某个事件（ApplicationEvent及其子类）
- * 			@EventListener;
- * 			原理：使用EventListenerMethodProcessor处理器来解析方法上的@EventListener；
+ * 			也可以在方法上添加 @EventListener 注解，实现监听。
+ * 				原理：使用 EventListenerMethodProcessor 处理器来解析方法上的@EventListener；
+ * 					 EventListenerMethodProcessor 实现了 SmartInitializingSingleton 接口。
  * 
  * 		2）、把监听器加入到容器；
  * 		3）、只要容器中有相关事件的发布，我们就能监听到这个事件；
@@ -101,8 +102,6 @@ import com.atguigu.bean.Blue;
  *   			1）、先创建所有的单实例bean；getBean();
  *   			2）、获取所有创建好的单实例bean，判断是否是SmartInitializingSingleton类型的；
  *   				如果是就调用afterSingletonsInstantiated();
- * 		
- * 
  *
  */
 @ComponentScan("com.atguigu.ext")

@@ -5,7 +5,9 @@ import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatche
 import com.atguigu.config.AppConfig;
 import com.atguigu.config.RootConfig;
 
-//web容器启动的时候创建对象；调用方法来初始化容器以前前端控制器
+/**
+ * web容器启动的时候创建对象；调用方法来初始化容器（Spring）以及前端控制器（DispatcherServlet）
+ */
 public class MyWebAppInitializer extends AbstractAnnotationConfigDispatcherServletInitializer {
 
 	//获取根容器的配置类；（Spring的配置文件）   父容器；

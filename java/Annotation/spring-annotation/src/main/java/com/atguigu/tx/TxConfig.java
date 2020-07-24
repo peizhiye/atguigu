@@ -28,7 +28,7 @@ import com.mchange.v2.c3p0.ComboPooledDataSource;
  * 		数据源、数据库驱动、Spring-jdbc模块
  * 2、配置数据源、JdbcTemplate（Spring提供的简化数据库操作的工具）操作数据
  * 3、给方法上标注 @Transactional 表示当前方法是一个事务方法；
- * 4、 @EnableTransactionManagement 开启基于注解的事务管理功能；
+ * 4、@EnableTransactionManagement 开启基于注解的事务管理功能；
  * 		@EnableXXX
  * 5、配置事务管理器来控制事务;
  * 		@Bean
@@ -59,7 +59,7 @@ import com.mchange.v2.c3p0.ComboPooledDataSource;
  * 							2）、再获取PlatformTransactionManager，如果事先没有添加指定任何transactionmanger
  * 								最终会从容器中按照类型获取一个PlatformTransactionManager；
  * 							3）、执行目标方法
- * 								如果异常，获取到事务管理器，利用事务管理回滚操作；
+ * 								如果异常，获取到事务管理器，利用事务管理器回滚操作；
  * 								如果正常，利用事务管理器，提交事务
  * 			
  */
