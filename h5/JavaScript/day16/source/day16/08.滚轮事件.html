@@ -15,8 +15,7 @@
 		<script type="text/javascript">
 			
 			window.onload = function(){
-				
-				
+
 				//获取id为box1的div
 				var box1 = document.getElementById("box1");
 				
@@ -28,13 +27,11 @@
 				 * 在火狐中需要使用 DOMMouseScroll 来绑定滚动事件
 				 * 	注意该事件需要通过addEventListener()函数来绑定
 				 */
-				
-				
+
 				box1.onmousewheel = function(event){
 					
 					event = event || window.event;
-					
-					
+
 					//event.wheelDelta 可以获取鼠标滚轮滚动的方向
 					//向上滚 120   向下滚 -120
 					//wheelDelta这个值我们不看大小，只看正负
@@ -45,8 +42,7 @@
 					//在火狐中使用event.detail来获取滚动的方向
 					//向上滚 -3  向下滚 3
 					//alert(event.detail);
-					
-					
+
 					/*
 					 * 当鼠标滚轮向下滚动时，box1变长
 					 * 	当滚轮向上滚动时，box1变短
@@ -67,25 +63,17 @@
 					 * 但是IE8不支持event.preventDefault();这个玩意，如果直接调用会报错
 					 */
 					event.preventDefault && event.preventDefault();
-					
-					
+
 					/*
 					 * 当滚轮滚动时，如果浏览器有滚动条，滚动条会随之滚动，
 					 * 这是浏览器的默认行为，如果不希望发生，则可以取消默认行为
 					 */
 					return false;
-					
-					
-					
-					
 				};
 				
 				//为火狐绑定滚轮事件
 				bind(box1,"DOMMouseScroll",box1.onmousewheel);
-				
-				
 			};
-			
 			
 			function bind(obj , eventStr , callback){
 				if(obj.addEventListener){
@@ -106,6 +94,7 @@
 			
 		</script>
 	</head>
+
 	<body style="height: 2000px;">
 		
 		<div id="box1"></div>

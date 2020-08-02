@@ -27,7 +27,7 @@
 					 *  需要一个文本内容作为参数，将会根据该内容创建文本节点，并将新的节点返回
 					 */
 					var gzText = document.createTextNode("广州");
-					
+
 					//将gzText设置li的子节点
 					/*
 					 * appendChild()
@@ -41,8 +41,7 @@
 					
 					//将广州添加到city下
 					city.appendChild(li);
-					
-					
+
 				});
 				
 				//将"广州"节点插入到#bj前面
@@ -65,8 +64,7 @@
 					 * 		父节点.insertBefore(新节点,旧节点);
 					 */
 					city.insertBefore(li , bj);
-					
-					
+
 				});
 				
 				
@@ -89,8 +87,7 @@
 					 * 	- 语法：父节点.replaceChild(新节点,旧节点);
 					 */
 					city.replaceChild(li , bj);
-					
-					
+
 				});
 				
 				//删除#bj节点
@@ -137,6 +134,11 @@
 					 * 使用innerHTML也可以完成DOM的增删改的相关操作
 					 * 一般我们会两种方式结合使用
 					 */
+					/* 下面这种 += 的方式的原理：先删除原来的innerHTML，
+					 *		之后再重新创建新的innerHTML
+					 * 这种方式存在的问题：1、内存消耗较大。
+					 * 2、删除原来的innerHTML时，其绑定的事件响应函数也会被清除
+					 */
 					//city.innerHTML += "<li>广州</li>";
 					
 					//创建一个li
@@ -147,16 +149,14 @@
 					city.appendChild(li);
 					
 				});
-				
-				
+
 			};
 			
 			function myClick(idStr, fun) {
 				var btn = document.getElementById(idStr);
 				btn.onclick = fun;
 			}
-			
-		
+
 		</script>
 		
 	</head>

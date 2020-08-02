@@ -28,8 +28,7 @@
 					//innerHTML 通过这个属性可以获取到元素内部的html代码
 					alert(bj.innerHTML);
 				};
-				
-				
+
 				//为id为btn02的按钮绑定一个单击响应函数
 				var btn02 = document.getElementById("btn02");
 				btn02.onclick = function(){
@@ -47,7 +46,6 @@
 						alert(lis[i].innerHTML);
 					}
 				};
-				
 				
 				//为id为btn03的按钮绑定一个单击响应函数
 				var btn03 = document.getElementById("btn03");
@@ -97,8 +95,8 @@
 					var city = document.getElementById("city");
 					//返回#city的所有子节点
 					/*
-					 * childNodes属性会获取包括文本节点在呢的所有节点
-					 * 根据DOM标签标签间空白也会当成文本节点
+					 * childNodes属性会获取包括文本节点在内的所有节点
+					 * 根据DOM标准，标签间的空白也会当成文本节点
 					 * 注意：在IE8及以下的浏览器中，不会将空白文本当成子节点，
 					 * 	所以该属性在IE8中会返回4个子元素而其他浏览器是9个
 					 */
@@ -130,7 +128,7 @@
 					//firstElementChild获取当前元素的第一个子元素
 					/*
 					 * firstElementChild不支持IE8及以下的浏览器，
-					 * 	如果需要兼容他们尽量不要使用
+					 * 	如果需要兼容他们，尽量不要使用
 					 */
 					//fir = phone.firstElementChild;
 					
@@ -157,8 +155,7 @@
 					
 					
 				});
-				
-				
+
 				//为id为btn08的按钮绑定一个单击响应函数
 				myClick("btn08",function(){
 					
@@ -183,8 +180,7 @@
 					//文本框的value属性值，就是文本框中填写的内容
 					alert(um.value);
 				});
-				
-				
+
 				//设置#username的value属性值
 				myClick("btn10",function(){
 					//获取id为username的元素
@@ -192,8 +188,7 @@
 					
 					um.value = "今天天气真不错~~~";
 				});
-				
-				
+
 				//返回#bj的文本值
 				myClick("btn11",function(){
 					
@@ -208,13 +203,11 @@
 					alert(fc.nodeValue);*/
 					
 					alert(bj.firstChild.nodeValue);
-					
-					
+
 				});
 				
 			};
-			
-		
+
 		</script>
 	</head>
 	<body>

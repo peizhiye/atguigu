@@ -11,7 +11,7 @@
 				 * 键盘事件：
 				 * 	onkeydown
 				 * 		- 按键被按下
-				 * 		- 对于onkeydown来说如果一直按着某个按键不松手，则事件会一直触发
+				 * 		- 对于onkeydown来说，如果一直按着某个按键不松手，则事件会一直触发
 				 * 		- 当onkeydown连续触发时，第一次和第二次之间会间隔稍微长一点，其他的会非常的快
 				 * 			这种设计是为了防止误操作的发生。
 				 * 	onkeyup
@@ -41,8 +41,6 @@
 					if(event.keyCode === 89 && event.ctrlKey){
 						console.log("ctrl和y都被按下了");
 					}
-					
-					
 				};
 				
 				/*document.onkeyup = function(){
@@ -64,17 +62,13 @@
 						//如果在onkeydown中取消了默认行为，则输入的内容，不会出现在文本框中
 						return false;
 					}
-					
-					
 				};
 			};
-			
-			
+
 		</script>
 	</head>
+
 	<body>
-		
 		<input type="text" />
-		
 	</body>
 </html>

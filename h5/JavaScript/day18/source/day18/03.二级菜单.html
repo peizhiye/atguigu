@@ -53,11 +53,10 @@
 						//切换菜单的显示状态
 						toggleMenu(parentDiv);
 						
-						
 						//判断openDiv和parentDiv是否相同
 						if(openDiv != parentDiv  && !hasClass(openDiv , "collapsed")){
 							//打开菜单以后，应该关闭之前打开的菜单
-							//为了可以统一处理动画过渡效果，我们希望在这将addClass改为toggleClass
+							//为了可以统一处理动画的过渡效果，我们希望在这将addClass改为toggleClass
 							//addClass(openDiv , "collapsed");
 							//此处toggleClass()不需要有移除的功能
 							//toggleClass(openDiv , "collapsed");
@@ -67,7 +66,6 @@
 						
 						//修改openDiv为当前打开的菜单
 						openDiv = parentDiv;
-						
 					};
 				}
 				
@@ -94,13 +92,9 @@
 						//动画执行完毕，内联样式已经没有存在的意义了，删除之
 						obj.style.height = "";
 					});
-						
 				}
-				
-				
 			};
-			
-			
+
 		</script>
 		
 	</head>

@@ -57,6 +57,7 @@
 					 * offsetWidth
 					 * offsetHeight
 					 * 	- 获取元素的整个的宽度和高度，包括内容区、内边距和边框
+					 *  - 这些属性都是不带px的，返回都是一个数字，可以直接进行计算
 					 */
 					//alert(box1.offsetWidth);
 					
@@ -104,16 +105,14 @@
 					//当满足scrollWidth - scrollLeft == clientWidth
 					//说明水平滚动条滚动到底
 					//alert(box4.scrollHeight - box4.scrollTop); // 600
-					
-					
-					
+
 				};
 				
 			};
-			
-			
+
 		</script>
 	</head>
+
 	<body id="body">
 		<button id="btn01">点我一下</button>
 		<br /><br />
@@ -121,9 +120,7 @@
 		 <div id="box4">
 		 	<div id="box5"></div>
 		 </div>
-		
-		
-		
+
 		<br /><br />
 		
 		<div id="box3">
@@ -131,7 +128,6 @@
 				<div id="box1"></div>
 			</div>
 		</div>
-		
-		
+
 	</body>
 </html>

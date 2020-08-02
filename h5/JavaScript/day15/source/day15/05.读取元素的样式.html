@@ -23,12 +23,12 @@
 				btn01.onclick = function(){
 					//读取box1的宽度
 					//alert(box1.style.width);
-					
+
 					/*
 					 * 获取元素的当前显示的样式
 					 * 	语法：元素.currentStyle.样式名
 					 * 它可以用来读取当前元素正在显示的样式
-					 * 	如果当前元素没有设置该样式，则获取它的默认值
+					 * 	如果当前元素没有设置该样式，则获取它的默认值（如auto等）
 					 * 
 					 * currentStyle只有IE浏览器支持，其他的浏览器都不支持
 					 */
@@ -46,7 +46,7 @@
 					 * 		第二个：可以传递一个伪元素，一般都传null
 					 * 
 					 * 该方法会返回一个对象，对象中封装了当前元素对应的样式
-					 * 	可以通过对象.样式名来读取样式
+					 * 	可以通过 对象.样式名 来读取样式
 					 * 	如果获取的样式没有设置，则会获取到真实的值，而不是默认值
 					 * 	比如：没有设置width，它不会获取到auto，而是一个长度
 					 * 
@@ -69,7 +69,6 @@
 					var w = getStyle(box1,"width");
 					alert(w);
 					
-					
 				};
 				
 			};
@@ -80,9 +79,11 @@
 			 * 		obj 要获取样式的元素
 			 * 		name 要获取的样式名
 			 */
-			
 			function getStyle(obj , name){
-				
+
+				// 注意，这里要使用window.getComputedStyle，而不是getComputedStyle变量
+				// 使用getComputedStyle变量，若找不到，会报错
+				// 使用window.getComputedStyle，若找不到，返回undefined
 				if(window.getComputedStyle){
 					//正常浏览器的方式，具有getComputedStyle()方法
 					return getComputedStyle(obj , null)[name];
@@ -94,8 +95,7 @@
 				//return window.getComputedStyle?getComputedStyle(obj , null)[name]:obj.currentStyle[name];
 				
 			}
-			
-			
+
 		</script>
 	</head>
 	<body>
