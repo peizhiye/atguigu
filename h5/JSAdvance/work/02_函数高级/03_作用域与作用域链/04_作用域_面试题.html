@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>04_作用域_面试题</title>
+</head>
+<body>
+<script type="text/javascript">
+  var x = 10;
+  function fn() {
+    console.log(x);
+  }
+  function show(f) {
+    var x = 20;
+    f();
+  }
+  show(fn); // 10，注意作用域是在函数定义时确定的，和函数调用没有关系
+
+
+</script>
+</body>
+</html>
