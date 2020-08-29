@@ -12,6 +12,8 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <java.version>1.8</java.version>
         <revision>1.0-SNAPSHOT</revision>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
     </properties>
 
     <dependencyManagement>
@@ -64,6 +66,8 @@
         <module>spring-boot-06-data-mybatis</module>
         <module>spring-boot-07</module>
         <module>spring-boot-08-starter</module>
+<!--        <module>atguigu-spring-boot-starter</module>-->
+<!--        <module>atguigu-spring-boot-starter-autoconfigurer</module>-->
         <module>spring-boot-08-starter-test</module>
     </modules>
 </project>

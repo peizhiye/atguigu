@@ -12,7 +12,7 @@ import java.util.Map;
 @ControllerAdvice
 public class MyExceptionHandler {
 
-    //1、浏览器客户端返回的都是json
+    //1、浏览器和客户端返回的都是json
 //    @ResponseBody
 //    @ExceptionHandler(UserNotExistException.class)
 //    public Map<String,Object> handleException(Exception e){

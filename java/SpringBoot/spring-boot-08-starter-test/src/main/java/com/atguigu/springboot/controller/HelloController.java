@@ -13,6 +13,6 @@ public class HelloController {
 
     @GetMapping("/hello")
     public String hello(){
-        return helloService.sayHellAtguigu("haha");
+        return helloService.sayHelloAtguigu("haha");
     }
 }

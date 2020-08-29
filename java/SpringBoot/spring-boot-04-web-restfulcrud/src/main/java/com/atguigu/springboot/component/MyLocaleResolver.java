@@ -8,7 +8,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.util.Locale;
 
 /**
- * 可以在连接上携带区域信息
+ * 可以在链接上携带区域信息
  */
 public class MyLocaleResolver implements LocaleResolver {
     

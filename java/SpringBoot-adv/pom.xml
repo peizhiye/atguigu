@@ -1,0 +1,39 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.atguigu.springboot</groupId>
+    <artifactId>springboot-adv</artifactId>
+    <version>${revision}</version>
+    <packaging>pom</packaging>
+
+    <properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <java.version>1.8</java.version>
+        <revision>1.0-SNAPSHOT</revision>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
+    </properties>
+
+    <dependencyManagement>
+        <dependencies>
+
+        </dependencies>
+    </dependencyManagement>
+
+    <build>
+
+    </build>
+
+    <modules>
+        <module>springboot-01-cache</module>
+        <module>springboot-02-amqp</module>
+        <module>springboot-03-elastic</module>
+        <module>springboot-04-task</module>
+        <module>springboot-05-security</module>
+        <module>springboot-06-dubbo</module>
+        <module>springboot-06-springcloud</module>
+        <module>springboot-07-deploy</module>
+        <module>springboot-08-actuator</module>
+    </modules>
+</project>
