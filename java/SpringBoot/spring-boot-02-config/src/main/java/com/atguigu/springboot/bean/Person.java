@@ -19,7 +19,7 @@ import java.util.Map;
  * @ConfigurationProperties：告诉SpringBoot将本类中的所有属性和配置文件中相关的配置进行绑定；
  *      prefix = "person"：配置文件中哪个下面的所有属性进行一一映射
  *
- * 只有这个组件是容器中的组件，才能容器提供的@ConfigurationProperties功能；
+ * 只有这个组件是容器中的组件，才能使用容器提供的@ConfigurationProperties功能；
  *  @ConfigurationProperties(prefix = "person")默认从全局配置文件中获取值；
  *
  */
