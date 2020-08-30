@@ -4,7 +4,7 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>com.atguigu</groupId>
-	<artifactId>provider-ticket</artifactId>
+	<artifactId>provider-ticket-dubbo</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>jar</packaging>
 
@@ -35,7 +35,7 @@
 			<version>0.1.0</version>
 		</dependency>
 
-		<!--引入zookeeper的客户端工具-->
+		<!--引入zookeeper的客户端工具，dubbo 2.6版本以前使用 zkclient-->
 		<!-- https://mvnrepository.com/artifact/com.github.sgroschupf/zkclient -->
 		<dependency>
 			<groupId>com.github.sgroschupf</groupId>

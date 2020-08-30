@@ -7,7 +7,7 @@
 		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.3.xsd
 		http://dubbo.apache.org/schema/dubbo http://dubbo.apache.org/schema/dubbo/dubbo.xsd
 		http://code.alibabatech.com/schema/dubbo http://code.alibabatech.com/schema/dubbo/dubbo.xsd">
-	<context:component-scan base-package="com.atguigu.gmall.service.impl"></context:component-scan>
+	<context:component-scan base-package="com.atguigu.gmall.service.impl"/>
 
 
 	<dubbo:application name="order-service-consumer"></dubbo:application>
