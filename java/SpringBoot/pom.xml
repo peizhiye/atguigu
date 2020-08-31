@@ -1,0 +1,73 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.atguigu.springboot</groupId>
+    <artifactId>springboot</artifactId>
+    <version>${revision}</version>
+    <packaging>pom</packaging>
+
+
+    <properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <java.version>1.8</java.version>
+        <revision>1.0-SNAPSHOT</revision>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
+    </properties>
+
+    <dependencyManagement>
+        <dependencies>
+
+        </dependencies>
+    </dependencyManagement>
+
+    <build>
+        <pluginManagement>
+            <plugins>
+                <!--设置JAVA代码的编译级别-->
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-compiler-plugin</artifactId>
+                    <configuration>
+                        <source>${java.version}</source>
+                        <target>${java.version}</target>
+                    </configuration>
+                </plugin>
+            </plugins>
+        </pluginManagement>
+
+<!--        <plugins>-->
+<!--            &lt;!&ndash;设置JAVA代码的编译级别&ndash;&gt;-->
+<!--            <plugin>-->
+<!--                <groupId>org.apache.maven.plugins</groupId>-->
+<!--                <artifactId>maven-compiler-plugin</artifactId>-->
+<!--                <version>3.8.0</version>-->
+<!--                <configuration>-->
+<!--                    <source>${java.version}</source>-->
+<!--                    <target>${java.version}</target>-->
+<!--                </configuration>-->
+<!--            </plugin>-->
+<!--        </plugins>-->
+
+    </build>
+
+    <modules>
+        <module>spring-boot-01-helloworld</module>
+        <module>spring-boot-01-helloworld-quick</module>
+        <module>spring-boot-02-config</module>
+        <module>spring-boot-02-config-02</module>
+        <module>spring-boot-02-config-autoconfig</module>
+        <module>spring-boot-03-logging</module>
+        <module>spring-boot-04-web-jsp</module>
+        <module>spring-boot-04-web-restfulcrud</module>
+        <module>spring-boot-06-data-jdbc</module>
+        <module>spring-boot-06-data-jpa</module>
+        <module>spring-boot-06-data-mybatis</module>
+        <module>spring-boot-07</module>
+        <module>spring-boot-08-starter</module>
+<!--        <module>atguigu-spring-boot-starter</module>-->
+<!--        <module>atguigu-spring-boot-starter-autoconfigurer</module>-->
+        <module>spring-boot-08-starter-test</module>
+    </modules>
+</project>
