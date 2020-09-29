@@ -2,6 +2,7 @@ package com.atguigu.gmall.service.impl;
 
 import java.util.List;
 
+import com.alibaba.dubbo.config.annotation.Reference;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -22,7 +23,9 @@ import com.atguigu.gmall.service.UserService;
 public class OrderServiceImpl implements OrderService {
 
 	@Autowired
+//	@Reference(version = "*")
 	UserService userService;
+
 	@Override
 	public List<UserAddress> initOrder(String userId) {
 		// TODO Auto-generated method stub

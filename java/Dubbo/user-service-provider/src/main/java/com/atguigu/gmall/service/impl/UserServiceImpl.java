@@ -3,9 +3,11 @@ package com.atguigu.gmall.service.impl;
 import java.util.Arrays;
 import java.util.List;
 
+import com.alibaba.dubbo.config.annotation.Service;
 import com.atguigu.gmall.bean.UserAddress;
 import com.atguigu.gmall.service.UserService;
 
+//@Service
 public class UserServiceImpl implements UserService {
 
 	@Override

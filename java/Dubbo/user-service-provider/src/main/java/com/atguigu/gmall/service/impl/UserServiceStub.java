@@ -13,7 +13,7 @@ public class UserServiceStub implements UserService {
 	
 
 	/**
-	 * 传入的是userService远程的代理对象
+	 * 传入的是 userService 远程的代理对象
 	 * @param userService
 	 */
 	public UserServiceStub(UserService userService) {

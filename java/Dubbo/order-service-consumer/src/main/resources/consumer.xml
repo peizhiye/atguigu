@@ -24,7 +24,7 @@
 	<!-- timeout="0" 默认是1000ms-->
 	<!-- retries="":重试次数，不包含第一次调用，0代表不重试-->
 	<!-- 幂等（设置重试次数）【查询、删除、修改】、非幂等（不能设置重试次数）【新增】 -->
-	<dubbo:reference interface="com.atguigu.gmall.service.UserService" 
+	<dubbo:reference interface="com.atguigu.gmall.service.UserService"
 		id="userService" timeout="5000" retries="3" version="*">
 		<!-- <dubbo:method name="getUserAddressList" timeout="1000"></dubbo:method> -->
 	</dubbo:reference>
@@ -34,5 +34,8 @@
 
 	<dubbo:monitor protocol="registry"></dubbo:monitor>
 	<!-- <dubbo:monitor address="127.0.0.1:7070"></dubbo:monitor> -->
-	
+
+<!-- 服务消费者通过 dubbo:annotation 启动基于注解的配置，可以不指定 package 属性 -->
+<!--	<dubbo:annotation package="com.atguigu.gmall.service.impl"/>-->
+<!--	<dubbo:annotation/>-->
 </beans>

@@ -27,7 +27,8 @@ public class OrderServiceImpl implements OrderService {
 	//@Autowired
 	@Reference(loadbalance="random",timeout=1000) //dubbo直连
 	UserService userService;
-	
+
+	// 注意：在 consumer 上配置 @HystrixCommand，并不要求对应的 provider 需要配置 @HystrixCommand。
 	@HystrixCommand(fallbackMethod="hello")
 	@Override
 	public List<UserAddress> initOrder(String userId) {

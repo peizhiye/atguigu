@@ -3,7 +3,8 @@ package com.atguigu.gmall.bean;
 import java.io.Serializable;
 
 /**
- * 用户地址
+ * 用户地址，必须实现 Serializable 接口，以使用户地址能够实现序列化，否则在 dubbo 调用时会出错
+ * java.lang.IllegalStateException: Serialized class com.atguigu.gmall.bean.UserAddress must implement java.io.Serializable
  * @author lfy
  *
  */
