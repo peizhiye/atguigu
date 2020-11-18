@@ -81,9 +81,9 @@
 
         <!-- Oracle驱动: 因为Oracle授权的问题，不能从Maven的仓库中下载到Oracle驱动 -->
         <dependency>
-            <groupId>com.oracle</groupId>
-            <artifactId>ojdbc14</artifactId>
-            <version>10.2.0.4.0</version>
+            <groupId>com.oracle.database.jdbc</groupId>
+            <artifactId>ojdbc6</artifactId>
+            <version>11.2.0.4</version>
         </dependency>
 
     </dependencies>
