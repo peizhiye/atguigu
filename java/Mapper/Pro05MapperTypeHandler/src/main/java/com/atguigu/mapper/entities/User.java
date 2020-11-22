@@ -24,11 +24,17 @@ public class User {
 	private String userName;
 	
 	//@ColumnType(typeHandler=AddressTypeHandler.class)
+	/**
+	 * 对于复杂类型的字段，有必要加 @Column 注解，并在 MyBatis 配置文件中配置 typeHandlers，否则通用 Mapper 会忽略复杂类型的字段映射。
+	 */
 	@Column
 	private Address address;
 	
-	//在枚举类型这里无法使用@ColumnType注解注册MyBatis内置的枚举类型处理器
+	// 由于 EnumTypeHandler 的泛型问题，在枚举类型这里无法使用 @ColumnType 注解注册 MyBatis 内置的枚举类型处理器
 	//@ColumnType(typeHandler=EnumTypeHandler.class)
+	/**
+	 * 对于复杂类型的字段，有必要加 @Column 注解，并在 MyBatis 配置文件中配置 typeHandlers，否则通用 Mapper 会忽略复杂类型的字段映射。
+	 */
 	@Column
 	private SeasonEnum season;
 	

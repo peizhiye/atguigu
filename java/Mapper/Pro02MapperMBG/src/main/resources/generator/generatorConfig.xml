@@ -3,6 +3,9 @@
         PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
         "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
 
+<!-- 在 IDEA 中，若上面的 URL 链接报红，将 "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd" 手动关联到对应的 jar 包的 .dtd 文件中，
+具体位置是：mybatis-generator-core-1.3.2.jar!/org/mybatis/generator/config/xml/mybatis-generator-config_1_0.dtd  -->
+
 <generatorConfiguration>
 	<!-- 引入外部属性文件 -->
 	<properties resource="config.properties" />
