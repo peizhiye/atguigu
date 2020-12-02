@@ -57,6 +57,7 @@ public class MyBatisTest {
 
 		// 2、获取sqlSession实例，能直接执行已经映射的sql语句
 		// sql的唯一标识：statement - Unique identifier matching the statement to use.
+		// 即 Mapper 映射文件中的 namespace + SQL 语句的 id
 		// 执行sql要用的参数：parameter - A parameter object to pass to the statement.
 		SqlSessionFactory sqlSessionFactory = getSqlSessionFactory();
 
@@ -80,6 +81,7 @@ public class MyBatisTest {
 		try {
 			// 3、获取接口的实现类对象
 			// 会为接口自动的创建一个代理对象，代理对象去执行增删改查方法
+			// 大致过程是：根据 getMapper 方法参数的类的全限定类名，找到对应的 Mapper，生成相应代理对象
 			EmployeeMapper mapper = sqlSession.getMapper(EmployeeMapper.class);
 			Employee employee = mapper.getEmpById(1);
 			System.out.println(mapper.getClass());

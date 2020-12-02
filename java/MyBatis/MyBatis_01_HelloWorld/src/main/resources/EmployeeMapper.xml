@@ -5,8 +5,8 @@
 <!--<mapper namespace="com.atguigu.mybatis.EmployeeMapper">-->
 <mapper namespace="com.atguigu.mybatis.dao.EmployeeMapper">
 <!--
-namespace:名称空间;指定为接口的全类名
-id：唯一标识
+namespace:名称空间；注意，若 Mapper 文件要与 DAO 接口建立关系，则这里必须指定为 DAO 接口的全限定类名
+id：唯一标识；若 Mapper 文件要与 DAO 接口建立关系，则这里必须指定为 DAO 接口中的方法名
 resultType：返回值类型
 #{id}：从传递过来的参数中取出id值
 
