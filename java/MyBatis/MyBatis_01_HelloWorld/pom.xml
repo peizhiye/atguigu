@@ -5,7 +5,7 @@
         <groupId>com.atguigu.mybatis</groupId>
         <artifactId>mybatis</artifactId>
         <version>${revision}</version>
-        <relativePath>../</relativePath>
+        <relativePath>../pom.xml</relativePath>
     </parent>
     <artifactId>MyBatis_01_HelloWorld</artifactId>
     <version>${revision}</version>

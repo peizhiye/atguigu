@@ -217,12 +217,12 @@ public class MyBatisTest {
 		
 		try{
 			DepartmentMapper mapper = openSession.getMapper(DepartmentMapper.class);
-			/*Department department = mapper.getDeptByIdPlus(1);
+			Department department = mapper.getDeptByIdPlus(1);
 			System.out.println(department);
-			System.out.println(department.getEmps());*/
-			Department deptByIdStep = mapper.getDeptByIdStep(1);
+			System.out.println(department.getEmps());
+			/*Department deptByIdStep = mapper.getDeptByIdStep(1);
 			System.out.println(deptByIdStep.getDepartmentName());
-			System.out.println(deptByIdStep.getEmps());
+			System.out.println(deptByIdStep.getEmps());*/
 		}finally{
 			openSession.close();
 		}

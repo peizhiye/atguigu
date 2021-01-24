@@ -23,7 +23,7 @@ public class SpringTransactionTest {
 	}
 	
 	@Test
-	public void testTransactionlPropagation(){
+	public void testTransactionalPropagation(){
 		cashier.checkout("AA", Arrays.asList("1001", "1002"));
 	}
 	

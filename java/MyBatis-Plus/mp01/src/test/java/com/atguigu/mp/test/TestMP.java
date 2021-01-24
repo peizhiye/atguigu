@@ -56,7 +56,7 @@ public class TestMP {
 					.eq("age", 44)
 					);
 	}
-	
+
 	/**
 	 * 条件构造器   查询操作
 	 */
@@ -154,7 +154,7 @@ public class TestMP {
 //		//employee.setId(7);
 //		employee.setLastName("小泽老师");
 //		employee.setGender(0);
-//		
+//
 //		Employee result = employeeMapper.selectOne(employee);
 //		System.out.println("result: " +result );
 		
